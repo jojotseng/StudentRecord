@@ -6,6 +6,11 @@ public class StudentRecord
    //Constructs a StudentRecord object with an array of scores.
    public StudentRecord(int [] s)
    {
+      StudentRecord[] students;
+      students = new StudentRecord[3];
+      students[0] = new StudentRecord(a);
+      students[1] = new StudentRecord(b);
+      
       scores = s;
    }
    
