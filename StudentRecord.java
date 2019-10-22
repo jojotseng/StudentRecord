@@ -7,10 +7,6 @@ public class StudentRecord
    public StudentRecord(int [] s)
    {
       StudentRecord[] students;
-      students = new StudentRecord[3];
-      students[0] = new StudentRecord(a);
-      students[1] = new StudentRecord(b);
-      
       scores = s;
    }
    
@@ -18,9 +14,15 @@ public class StudentRecord
     *  whose subscripts are between first and last, inclusive
     *  PRECONDITION: 0 <= first <= last < scores.length
     */
-   private double average(int first, int last)
+   public double average(int first, int last)
    {
-      return 0; //here so the class compiles
+      double sum=0.0;
+      for(int i=first; i<=last;i++)
+      {
+          sum+=scores[i];
+          sum/= ((last-first)+1);
+      }
+      return sum;
    }
     
    /** returns true if each successive value in scores is greater than
