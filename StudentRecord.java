@@ -6,7 +6,6 @@ public class StudentRecord
    //Constructs a StudentRecord object with an array of scores.
    public StudentRecord(int [] s)
    {
-      StudentRecord[] students;
       scores = s;
    }
    
@@ -30,7 +29,18 @@ public class StudentRecord
     */
    private boolean hasImproved()
    {
-      return false; //here so the class compiles
+       for(int i=0 ; i<=StudentRecord.length ; i++)
+       {
+           if(StudentRecord[i]<StudentRecord[i+1])
+           {
+               return true;
+           }
+           else
+           {
+               return false; //here so the class compiles
+           }
+           return false;
+        }
    }  
    
    /** if the values in scores have imrpoved, returns the average of
