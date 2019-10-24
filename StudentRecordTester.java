@@ -19,6 +19,7 @@ public class StudentRecordTester
         students[1] = new StudentRecord(b);
         students[2] = new StudentRecord(c);
         
+ 
     }
     
 }
